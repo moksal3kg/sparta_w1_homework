@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW 원페이지 쇼핑몰</title>
+    <style>
+        body {
+            width: 600px;
+            margin: auto;
+            /* background-color: tomato; */
+        }
+
+        .picture {
+            width: 80%;
+            margin: auto;
+        }
+
+        .details {
+            /* background-color: green; */
+            height: 220px;
+            /* margin-bottom: 0px; */
+        }
+
+        .details h2 {
+            display: inline;
+            margin-right: 20px;
+            /* background-color: whitesmoke; */
+        }
+
+
+        .details ol {
+            padding-left: 0px;
+            /* background-color: wheat; */
+        }
+
+        .details ol li {
+            margin-left: 50px;
+            /* background-color: turquoise; */
+        }
+
+        .order {
+            width: 500px;
+            /* background-color: yellow; */
+            margin: auto;
+            margin-top: 0px;
+            margin-bottom: 20px;
+        }
+
+        .order_title {
+            /* background-color: pink; */
+            width: 110px;
+        }
+
+        /* .order_input {
+            background-color: black;
+        } */
+
+        .input_text {
+            /* background-color: blue; */
+            width: 100%;
+        }
+
+        .input_dropdown {
+            /* background-color: teal; */
+            width: 100%;
+        }
+
+        button {
+            background-color: skyblue;
+            color: white;
+            width: 30%;
+            margin-bottom: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="picture">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRUf67bju_Htmsc2-BCftbO9kGLOlOFOsOBy3phafHcXXGW3VZO"
+            width=100% />
+    </div>
+    <div class="details">
+        <div class="details_title">
+            <h2>3월 추천도서 5종</h2>
+            <span>가격: 15,000원/1set</span>
+        </div>
+        <div class="details_description">
+            <ol>2020년 전세계적인 역병으로 외출을 자제해야 합니다. 위기를 기회 삼아 집에서 독서를 하는건 어떨까요? 최고의 추천작만 모았습니다.
+                <li>부, 자유, 행복</li>
+                <li>신천지, 그들은..</li>
+                <li>Corona 19</li>
+                <li>Der Schreckliche Anfang</li>
+                <li>변신 이야기</li>
+            </ol>
+        </div>
+    </div>
+    <table class="order">
+        <tr>
+            <td class="order_title">
+                주문자 이름:
+
+            </td>
+            <td class="order_input">
+                <input type="text" id="name" class="input_text">
+            </td>
+        </tr><br>
+        <tr>
+            <td class="order_title">
+                수량:
+            </td>
+            <td class="order_input">
+                <select class="input_dropdown">
+                    <option selected>---수량 선택---</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select></td>
+        </tr><br>
+        <tr>
+            <td class="order_title">
+                주소:
+            </td>
+            <td class="order_input">
+                <input type="text" id="address" class="input_text">
+            </td>
+        </tr><br>
+        <tr>
+            <td class="order_title">
+                전화번호:
+
+            </td>
+            <td class="order_input">
+                <input type="text" id="cell" class="input_text">
+            </td>
+        </tr><br>
+    </table>
+    <center><button type="submit">주문하기</button></center>
+</body>
+
+</html>
