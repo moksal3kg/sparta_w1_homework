@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HW 원페이지 쇼핑몰</title>
+    <link href="https://fonts.googleapis.com/css?family=Dokdo&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <style>
         body {
             width: 600px;
@@ -33,6 +36,11 @@
         .details ol {
             padding-left: 0px;
             /* background-color: wheat; */
+        }
+
+        .details_description {
+            font-family: 'Dokdo', cursive;
+            font-size: 25px;
         }
 
         .details ol li {
@@ -74,6 +82,48 @@
             margin-bottom: 200px;
         }
     </style>
+    <script>
+        function function_homewrok() {
+            first = $('#name').val();
+            if (first == "") {
+                alert('이름을 입력하세요!')
+                $('#name').focus();
+            }
+
+            else {
+                second = $('#order_number').val();
+                if (second == "---수량 선택---") {
+                    alert('수량을 고르세요!')
+                    $('#order_number').focus();
+                }
+                else {
+                    third = $('#address').val();
+                    if (third == "") {
+                        alert('주소를 입력하세요!')
+                        $('#address').focus();
+                    }
+                    else {
+                        last = $('#cell').val();
+                        if (last == "") {
+                            alert('전화번호를 입력하세요!')
+                            $('#cell').focus();
+                        }
+                        else {
+                            check = $('#cell').val();
+                            check_first = check.split('-')[0]
+                            check_second = check.split('-')[1]
+                            check_last = check.split('-')[2]
+                            if (check_first == "010" && check_second < 10000 && check_second > 0 && check_last < 10000 && check_last > 0 && check_second.length == 4 && check_last.length == 4) {
+                                alert('주문완료!!');
+                            } else {
+                                alert('전화번호 입력 형식이 틀립니다.                                010-0000-0000으로 입력해주세요');
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -111,7 +161,7 @@
                 수량:
             </td>
             <td class="order_input">
-                <select class="input_dropdown">
+                <select id="order_number" class="input_dropdown">
                     <option selected>---수량 선택---</option>
                     <option>1</option>
                     <option>2</option>
@@ -138,7 +188,7 @@
             </td>
         </tr><br>
     </table>
-    <center><button type="submit">주문하기</button></center>
+    <center><button id="submit_button" type="submit" onclick="function_homewrok()">주문하기</button></center>
 </body>
 
 </html>
